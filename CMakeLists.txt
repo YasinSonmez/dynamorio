@@ -1245,7 +1245,8 @@ if (LINUX AND X86 AND X64)
   # libdrpt2ir and drpt2trace depend on libipt. If the libipt submodule is not
   # initialized, cmake will report a warning here.
   if (EXISTS "${PROJECT_SOURCE_DIR}/third_party/libipt/.git" )
-    set(BUILD_PT_POST_PROCESSOR ON)
+# This make scarab not build   
+#    set(BUILD_PT_POST_PROCESSOR ON)
   else ()
     message(STATUS "libipt submodule is not initialized. libdrpt2ir and drpt2trace will not be built.")
   endif ()
